@@ -15,17 +15,18 @@ var htmlhint = require("gulp-htmlhint");
 
 gulp.sources = {
   src:  './src',
+  pages:  './src/pages',
   dist: './dist'
 };
 
 // Start server dev
 gulp.task('connect:dev', () => {
   connect.server({
-    root: [gulp.sources.src, '.tmp', './'],
+    root: [gulp.sources.pages, '.tmp', './'],
     livereload: true,
     port: 9000,
     host: '0.0.0.0',
-    fallback: gulp.sources.src + '/index.html'
+    fallback: gulp.sources.pages + '/index.html'
   });
 });
 
@@ -59,7 +60,7 @@ gulp.task('fileinclude', () => {
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(gulp.dest(gulp.sources.src))
+    .pipe(gulp.dest(gulp.sources.pages))
     .pipe(connect.reload());
 });
 

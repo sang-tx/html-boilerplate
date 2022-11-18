@@ -1,7 +1,10 @@
 # HTML Boilerplate
 
 HTML5 Boilerplate is a frontend template include HTML, CSS, JS for building fast sites.
-
+## System require
+* Install `npm install --global windows-build-tools` via Window PowerShell run as Administrator mode.
+* Node 12.14.0
+* Install `npm install --global node-sass`
 ## Getting started
 
 Open your preferred command line tool and run follow some steps below:
